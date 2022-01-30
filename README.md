@@ -1,6 +1,6 @@
 # skelton-nextjs-prisma-app
 
-コレはアプリの雛形です。
+コレは個人の勉強用に作成したアプリの雛形です。
 
 ## 構成
 
@@ -9,6 +9,28 @@
   - Google OAuth
 - Prisma
   - Planet Scale
+
+## 用意しているもの
+
+### 画面
+
+| ページ名       | パス           | 認証  |
+|:-----------|:-------------|:----|
+| トップページ     | `/`          | -   |
+| ログイン画面     | `/login`     | -   |
+| ダッシュボード画面  | `/dashboard` | ○   |
+| サービスの状態を返す | `/api/stats` | -   | 
+| プロフィールを返す  | `/api/me`    | ○   | 
+
+### 認証状態に応じたルーティング
+
+`/pages/_middleware.ts` 内にログイン状態で特定のページにアクセスした時にリダイレクトをする処理がいくつかあります。
+
+## プロジェクトの作成
+
+```shell
+$npx create-next-app --example https://github.com/fukata/skelton-nextjs-prisma-app/tree/main sample-app
+```
 
 ## 開発方法
 
