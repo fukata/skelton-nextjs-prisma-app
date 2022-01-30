@@ -8,7 +8,7 @@
 - NextAuth.js
   - Google OAuth
 - Prisma
-- Planet Scale
+  - Planet Scale
 
 ## 開発方法
 
