@@ -81,6 +81,14 @@ $npx prisma migrate dev
 $yarn dev
 ```
 
+## Heroku で動かす場合
+
+- ClearDB (MySQL)を使用します。
+  - 環境変数を設定します。
+  - `$ heroku config:set DATABASE_URL=<CLEARDB_DATABASE_URLの値>` 
+- その他の環境変数も `.env.sample` を参考に設定します。
+- Procfileが既にあるので Github 等と連携すればデプロイが行われるはずです。
+
 ## Tips
 
 ### Prismaのログを見たい時
