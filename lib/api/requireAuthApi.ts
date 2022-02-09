@@ -10,12 +10,12 @@ import {Session} from "next-auth";
  * pages/api/me.tsx
  * ```
  * export function MeApi(req: NextApiRequest, res: NextApiResponse<ApiResponseData<ResponseData>>, session: Session) {
- *   const currentUser = session.user;
+ *   const currentUser = session.user!;
  *   return res.status(200).json({
  *     status: 'ok',
  *     data: {
- *       id: currentUser!.id ?? '',
- *       name: currentUser!.name ?? '',
+ *       id: currentUser.id ?? '',
+ *       name: currentUser.name ?? '',
  *     }
  *   });
  * }
