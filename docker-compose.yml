@@ -1,0 +1,15 @@
+version: '3.1'
+volumes:
+  db-data:
+    driver: local
+services:
+  db:
+    image: mysql:8.0.28
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      TZ: "/usr/share/zoneinfo/Etc/UTC"
+    ports:
+      - "3306:3306"
+    command: --innodb_file_per_table=true --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    volumes:
+      - db-data:/var/lib/mysql
