@@ -22,4 +22,4 @@ jobs:
         if: always()
         with:
           name: Cypress E2E Videos
-          path: e2e/cypress/videos
+          path: cypress/videos
